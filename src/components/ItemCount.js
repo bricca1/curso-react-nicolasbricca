@@ -33,9 +33,10 @@ export default function ItemCount({stock, initial, onAdd}) {
     <Paper elevation={3}>
         <Grid container>
             <Grid item>
-                <h3>{count}</h3>
+                <h1>producto 1</h1>
                 <ButtonGroup disableElevation variant="contained">
                 <Button onClick={ onAdd } disabled={stock === 0}>+</Button>
+                <h3>{count}</h3>
                 <Button onClick={ onSubstract }>-</Button>
                 <Button>Agregar al Carrito</Button>
                 </ButtonGroup>
