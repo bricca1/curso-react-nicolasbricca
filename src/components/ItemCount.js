@@ -2,7 +2,6 @@ import {React, useState} from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-import Paper from '@mui/material/Paper';
 // import { makeStyles } from '@mui/styles';
 
 
@@ -30,19 +29,17 @@ export default function ItemCount({stock, initial, onAdd}) {
        
     }
   return (
-    <Paper elevation={3}>
         <Grid container>
             <Grid item>
                 <ButtonGroup disableElevation variant="contained">
-                <Button onClick={ onAdd } disabled={stock === 0}>+</Button>
-                <h3>{count}</h3>
                 <Button onClick={ onSubstract }>-</Button>
+                <h3>{count}</h3>
+                <Button onClick={ onAdd } disabled={stock === 0}>+</Button>
                 <Button>Agregar al Carrito</Button>
                 </ButtonGroup>
             </Grid>
         </Grid>
 
-    </Paper>
 
   );
 }

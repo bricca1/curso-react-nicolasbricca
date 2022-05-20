@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react'
-import ItemCount from './ItemCount'
 import ItemList from './ItemList'
 import {items} from '../mocks/ItemsMock' 
 export default function ItemListContainer() {
@@ -14,7 +13,6 @@ export default function ItemListContainer() {
         }, 2000);
       })
       setProducts(prodPromise)
-      console.log(prodPromise)
     } catch(e){
       console.log(e)
     }
@@ -29,7 +27,6 @@ export default function ItemListContainer() {
     <div>  
       
       <ItemList items={products} />
-      {/* <ItemCount stock={3} initial={1} /> */}
     </div>
   )
 }

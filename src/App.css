@@ -26,3 +26,9 @@
   display: flex;
   justify-content: space-between;
 }
+.App-cards{
+  float: left;
+  margin:20px 20px 20px 20px;
+  width: 300px;
+  
+}
