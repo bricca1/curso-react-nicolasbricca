@@ -2,21 +2,13 @@ import {React, useState} from 'react';
 import ButtonGroup from '@mui/material/ButtonGroup';
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
-// import { makeStyles } from '@mui/styles';
 
-
-// const style = makeStyles({
-//     root:{
-
-//     }
-
-// })
 
 
 export default function ItemCount({stock, initial, onAdd}) {
     const [count, setCount] = useState(0)
     function onAdd(){
-        if (stock >= count){
+        if (stock > count){
             setCount(count + 1) 
         }
         

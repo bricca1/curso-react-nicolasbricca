@@ -12,7 +12,8 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import  CartWidget from './CartWidget'
+import CartWidget from './CartWidget'
+import { Link, useParams } from 'react-router-dom';
 
 const pages = ['Iphone', 'Samsung', 'Xiaomi'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -89,9 +90,10 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <Link key={page}  to={`/category/${page}`}>  <MenuItem key={page} onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
+              </Link>
               ))}
             </Menu>
           </Box>
