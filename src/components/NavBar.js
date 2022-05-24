@@ -90,7 +90,7 @@ const ResponsiveAppBar = () => {
               }}
             >
               {pages.map((page) => (
-              <Link key={page}  to={`/category/${page}`}>  <MenuItem key={page} onClick={handleCloseNavMenu}>
+              <Link key={page}  to={`/category/${page}`}>  <MenuItem  onClick={handleCloseNavMenu}>
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               </Link>
@@ -117,15 +117,20 @@ const ResponsiveAppBar = () => {
             LOGO
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
+            
+              {pages.map((page) => (
+                <Link key={page}  to={`/category/${page}`}>
+                  <Button
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{ my: 2, color: 'white', display: 'block' }}
+                  >
+                    {page}
+
               </Button>
+              </Link>
             ))}
+           
           </Box>
           <div className='App-nav'>
             <CartWidget></CartWidget>
