@@ -16,7 +16,7 @@ export default function Item({id, tittle, description, price, pictureURL }) {
             <ListItem>{price}</ListItem>
             <ListItem>{description}</ListItem>
             <Link to={`/item/${id}`} ><Button variant="contained" >Detalle</Button></Link>
-            <ItemCount stock={3} initial={1} />
+            <ItemCount stock={3} initial={1} item={{id, tittle, description, price, pictureURL}}/>
         </List>
       </Paper>
 
