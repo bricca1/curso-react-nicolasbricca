@@ -42,8 +42,31 @@ export default function CartProvider({children}) {
         })
         return [flag, i]
     }
+    const getTotalPrice = () => {
+        if(cart.length !== 0) {
+            const total = cart.reduce((acc, item) =>{
+                let {product, quantity} = item
+                return acc += (product.price * quantity)
+            }, 0)
+            return total
+        }else{
+            return 0
+        }
+    }
 
-  return    <CartContext.Provider value={{ cart, addItemToCart, removeItem, clearCart}} >
+    const getQuantity = () => {
+        if(cart.length !== 0) {
+            const total = cart.reduce((acc, item) =>{
+                let {product, quantity} = item
+                return acc += quantity
+            }, 0)
+            return total
+        }else{
+            return 0
+        }
+    }
+
+  return    <CartContext.Provider value={{ cart, addItemToCart, removeItem, clearCart, getTotalPrice, getQuantity}} >
                 {children}
             </CartContext.Provider>
   

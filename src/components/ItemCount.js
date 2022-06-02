@@ -9,7 +9,7 @@ import { useCart } from './CartContext'
 
 export default function ItemCount({stock, initial, onAdd, item}) {
     const { addItemToCart, removeItem, clearCart} = useCart()
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(initial)
   return (
         <Grid container>
             <Grid item>
