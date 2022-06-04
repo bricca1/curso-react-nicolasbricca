@@ -15,7 +15,7 @@ export default function ItemListContainer() {
       const prodPromise = await new Promise((res, rej) => {
         setTimeout(() => {
           if(categoryId){
-            const filterProds= items.filter((prods) => prods.categoryId == categoryId)
+            const filterProds= items.filter((prods) => prods.categoryId === categoryId)
             console.log('lista de items' + filterProds)
             res(filterProds)
           }
