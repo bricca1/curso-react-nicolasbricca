@@ -2,22 +2,26 @@
 import React, {useState, useEffect} from 'react'
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom'
-import { getFirestore , doc, getDocs} from 'firebase/firestore'
+import { getFirestore , doc, getDoc, collection} from 'firebase/firestore'
+
 export default function ItemDetailContainer() {
-    const [product, setProduct] = useState();
-    const {itemId} = useParams()
-    useEffect(() => {
-      const db = getFirestore();
-      const itemsCollection = collection(db,"items");
-      getDocs(itemsCollection).then((snapshot)=>{
-        if(snapshot.size === 0){
-          console.log('No results')
-        }
-        setProduct(snapshot.docs.map((doc) => ({
-          id: doc.id , ...doc.data
-        })))
-      })
-    }, [])
+  const { itemId } = useParams()
+  const [product, setProduct] = useState([])
+  useEffect(() => { 
+      const db = getFirestore()      
+      const docRef = doc(db, "items", itemId)
+      getDoc(docRef)
+          .then((snapshot) => {
+              if(snapshot.data() !== undefined) {
+                  setProduct({id: snapshot.id, ...snapshot.data()})
+                  console.log("snapshot id", snapshot.data())                  
+              } else {
+                console.log("No hay stock")
+
+            }
+          })
+          
+  }, [itemId])
     
   
 

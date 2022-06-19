@@ -6,12 +6,13 @@ import Paper from '@mui/material/Paper';
 import Button from '@mui/material/Button';
 import '../App.css';
 import { Link } from 'react-router-dom';
+import { CardMedia } from '@mui/material';
 export default function Item({id, tittle, description, price, pictureURL }) {
 
   return (
       <Paper className='App-cards' elevation={3}>
         <List>
-            <ListItem><img width={'200px'} height={'200px'} src={ require(`../${ pictureURL }`).default } /></ListItem>
+            <ListItem><CardMedia component="img" sx={{width: 600, height: 300 }} src={pictureURL}/></ListItem>
             <ListItem>{tittle}</ListItem>
             <ListItem>{price}</ListItem>
             <ListItem>{description}</ListItem>
