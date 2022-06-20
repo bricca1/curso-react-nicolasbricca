@@ -5,6 +5,7 @@ import { IconButton } from '@mui/material'
 import { Grid } from '@mui/material'
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
+import { CardMedia } from '@mui/material';
 import { Route, Link, } from 'react-router-dom'
 import CheckoutForm from './CheckoutForm'
 export default function Cart() {
@@ -25,6 +26,7 @@ export default function Cart() {
         <Grid item xs={6}>
           <div >{cart.length > 0 ? cart.map((item, key) => (
             <> 
+              <CardMedia component="img" sx={{width: 600, height: 300 }} src={pictureURL}/>
               <h3>{item.product.tittle}</h3>
               <h3>{item.quantity}</h3>
               <Button variant="outlined" onClick={() => removeItem(item)} startIcon={<DeleteIcon />} />
