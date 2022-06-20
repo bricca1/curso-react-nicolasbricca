@@ -6,6 +6,7 @@ import { Grid } from '@mui/material'
 import Button from '@mui/material/Button';
 import DeleteIcon from '@mui/icons-material/Delete';
 import { Route, Link, } from 'react-router-dom'
+import CheckoutForm from './CheckoutForm'
 export default function Cart() {
   const {cart, addItemToCart, removeItem, clearCart, getTotalPrice} = useCart()
   useEffect(() => {
@@ -37,7 +38,7 @@ export default function Cart() {
       </Paper>
       <Paper sx={{width:'400px', height:'500px'}}>
         <Grid item xs={6}>
-          <div>{cart.length}</div>
+          <CheckoutForm />
         </Grid>
       </Paper>
 

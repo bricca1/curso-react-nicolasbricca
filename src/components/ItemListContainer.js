@@ -41,7 +41,6 @@ export default function ItemListContainer() {
   
   return (
     <div>  
-      
       <ItemList items={products} />
     </div>
   )
