@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/curso-react-nicolasbricca/static/css/main.359d82f4.css",
-    "main.js": "/curso-react-nicolasbricca/static/js/main.3d2c3a10.js",
-    "static/js/787.a13ddf26.chunk.js": "/curso-react-nicolasbricca/static/js/787.a13ddf26.chunk.js",
-    "index.html": "/curso-react-nicolasbricca/index.html",
-    "main.359d82f4.css.map": "/curso-react-nicolasbricca/static/css/main.359d82f4.css.map",
-    "main.3d2c3a10.js.map": "/curso-react-nicolasbricca/static/js/main.3d2c3a10.js.map",
-    "787.a13ddf26.chunk.js.map": "/curso-react-nicolasbricca/static/js/787.a13ddf26.chunk.js.map"
+    "main.css": "/static/css/main.359d82f4.css",
+    "main.js": "/static/js/main.2e969dec.js",
+    "static/js/787.a13ddf26.chunk.js": "/static/js/787.a13ddf26.chunk.js",
+    "index.html": "/index.html",
+    "main.359d82f4.css.map": "/static/css/main.359d82f4.css.map",
+    "main.2e969dec.js.map": "/static/js/main.2e969dec.js.map",
+    "787.a13ddf26.chunk.js.map": "/static/js/787.a13ddf26.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.359d82f4.css",
-    "static/js/main.3d2c3a10.js"
+    "static/js/main.2e969dec.js"
   ]
 }
